@@ -1,0 +1,19 @@
+<ng-container *ngIf="width > 768; else mobileNav">
+  <div class="nav-container">
+    <div class="nav-item" routerLink="/">Home</div>
+    <div class="nav-item" routerLink="/map">Térkép</div>
+    <div class="nav-item" routerLink="/menetrend">Menetrend</div>
+  </div>
+</ng-container>
+<ng-template #mobileNav>
+  <div class="mobile-nav">
+    <div ngbDropdown class="d-inline-block">
+      <button type="button" class="btn dropdown-toggle" ngbDropdownToggle>Menü</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="/">Home</button>
+        <button ngbDropdownItem routerLink="/map">Térkép</button>
+        <button ngbDropdownItem routerLink="/menetrend">Menetrend</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

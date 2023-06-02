@@ -1,0 +1,16 @@
+.nav-container{
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-nav{
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 5vw;
+}
