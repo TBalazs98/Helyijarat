@@ -16,7 +16,7 @@ import {CommonModule} from "@angular/common";
     HomeComponent,
     MapComponent,
     NavbarComponent,
-    MenetrendComponent
+    MenetrendComponent,
   ],
   imports: [
     BrowserModule,
