@@ -1,0 +1,9 @@
+{
+  "Name": "Test name",
+  "Navbar": {
+    "Home": "Home",
+    "Map": "Map",
+    "Timetable": "Timetable",
+    "Menu": "Menu"
+  }
+}

@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {fromEvent, merge, Observable, Subscription} from "rxjs";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +8,12 @@ import {fromEvent, merge, Observable, Subscription} from "rxjs";
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit, OnDestroy{
-  width!: number
+  width: number = window.innerWidth
   resizeObservable$!: Observable<Event>
   openObservable$!: Observable<Event>
   resizeSubscription$!: Subscription
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.resizeObservable$ = fromEvent(window, 'resize')
@@ -24,9 +25,14 @@ export class NavbarComponent implements OnInit, OnDestroy{
     );
 
     this.resizeSubscription$ = merged.subscribe( evt => {
+      console.log(window.innerWidth)
       this.width = window.innerWidth
     })
 
+  }
+
+  changeLanguage(){
+    this.translate.use("en").subscribe()
   }
 
   ngOnDestroy() {

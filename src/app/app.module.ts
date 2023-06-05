@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,13 @@ import { MapComponent } from './map/map.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenetrendComponent } from './menetrend/menetrend.component';
 import {CommonModule} from "@angular/common";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './data/localization/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -23,7 +30,18 @@ import {CommonModule} from "@angular/common";
     CommonModule,
     AppRoutingModule,
     NgbModule,
-    LeafletModule
+    LeafletModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
+  exports:[
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

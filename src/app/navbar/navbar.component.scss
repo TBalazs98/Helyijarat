@@ -1,8 +1,25 @@
 .nav-container{
-  width: 100vw;
   height: 10vh;
+  flex-grow: 10;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+.small-start-container{
+  height: 10vh;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-end-container{
+  height: 10vh;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 

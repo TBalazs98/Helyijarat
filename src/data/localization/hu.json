@@ -1,0 +1,9 @@
+{
+  "Name": "Teszt név",
+  "Navbar": {
+    "Home": "Kezdőlap",
+    "Map": "Térkép",
+    "Timetable": "Menetrend",
+    "Menu": "Menü"
+  }
+}

@@ -1,19 +1,28 @@
 <ng-container *ngIf="width > 768; else mobileNav">
-  <div class="nav-container">
-    <div class="nav-item" routerLink="/">Home</div>
-    <div class="nav-item" routerLink="/map">Térkép</div>
-    <div class="nav-item" routerLink="/menetrend">Menetrend</div>
-  </div>
+  <nav class="d-flex">
+    <div class="small-start-container">
+      <img src="assets/crest.png" height="80%" routerLink="/">
+    </div>
+    <ul class="nav-container">
+      <button class="btn nav-item p-3" routerLink="/">{{"Navbar.Home"  | translate}}</button>
+      <button class="btn nav-item p-3" routerLink="/map">{{"Navbar.Map" | translate}}</button>
+      <button class="btn nav-item p-3" routerLink="/menetrend">{{"Navbar.Timetable" | translate}}</button>
+    </ul>
+    <div class="small-end-container">
+      <img src="assets/en.svg" height="24" class="ms-5" (click)="changeLanguage()">
+    </div>
+  </nav>
 </ng-container>
 <ng-template #mobileNav>
-  <div class="mobile-nav">
+  <nav class="mobile-nav">
     <div ngbDropdown class="d-inline-block">
-      <button type="button" class="btn dropdown-toggle" ngbDropdownToggle>Menü</button>
+      <button type="button" class="btn dropdown-toggle" ngbDropdownToggle>{{"Navbar.Menu" | translate}}</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem routerLink="/">Home</button>
-        <button ngbDropdownItem routerLink="/map">Térkép</button>
-        <button ngbDropdownItem routerLink="/menetrend">Menetrend</button>
+        <button ngbDropdownItem routerLink="/">{{"Navbar.Home"  | translate}}</button>
+        <button ngbDropdownItem routerLink="/map">{{"Navbar.Map" | translate}}</button>
+        <button ngbDropdownItem routerLink="/menetrend">{{"Navbar.Timetable" | translate}}</button>
+        <button ngbDropdownItem ><img src="assets/en.svg" height="24" (click)="changeLanguage()"></button>
       </div>
     </div>
-  </div>
+  </nav>
 </ng-template>
