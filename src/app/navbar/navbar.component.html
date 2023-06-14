@@ -9,7 +9,9 @@
       <button class="btn nav-item p-3" routerLink="/menetrend">{{"Navbar.Timetable" | translate}}</button>
     </ul>
     <div class="small-end-container">
-      <img src="assets/en.svg" height="24" class="ms-5" (click)="changeLanguage()">
+      <button class="btn nav-item p-3 ms-5">
+        <img src="assets/{{currentLang}}.svg" height="24" alt="" (click)="changeLanguage($event)">
+      </button>
     </div>
   </nav>
 </ng-container>
@@ -21,7 +23,9 @@
         <button ngbDropdownItem routerLink="/">{{"Navbar.Home"  | translate}}</button>
         <button ngbDropdownItem routerLink="/map">{{"Navbar.Map" | translate}}</button>
         <button ngbDropdownItem routerLink="/menetrend">{{"Navbar.Timetable" | translate}}</button>
-        <button ngbDropdownItem ><img src="assets/en.svg" height="24" (click)="changeLanguage()"></button>
+        <button ngbDropdownItem >
+          <img src="assets/{{currentLang}}.svg" height="20" (click)="changeLanguage($event)">
+        </button>
       </div>
     </div>
   </nav>

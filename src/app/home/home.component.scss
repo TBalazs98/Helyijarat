@@ -1,0 +1,42 @@
+.input-style{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .input-style{
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+.search-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.main-section{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin-bottom: auto;
+}
+
+.home{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-list{
+  min-height: 500px;
+}
