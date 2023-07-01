@@ -1,6 +1,9 @@
 import PathElement from "./PathElement";
+import Time from "../utility/Time";
 
 export default interface Path{
-  length: number;
+  pathStart: Time;
+  endStart: Time;
+  saturday: boolean;
   elements: PathElement[]
 }

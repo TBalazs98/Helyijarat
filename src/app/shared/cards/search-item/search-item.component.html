@@ -1,0 +1,24 @@
+<div class="card container-fluid d-flex flex-column mb-2">
+  <div class="main-row" (click)="toggle()">
+    <div class="me-5 d-flex align-items-center justify-content-center flex-column">
+      <div class="font-label">Megálló</div>
+      <div class="font-data">Homok</div>
+    </div>
+    <div class="me-5 d-flex align-items-center justify-content-center flex-column">
+      <div class="font-label">Idő</div>
+      <div class="font-data">11:59</div>
+    </div>
+    <div class="me-5 d-flex align-items-center justify-content-center flex-column ms-auto">
+      <div class="font-label">Következő megálló</div>
+      <div class="font-data-next">Egészségház</div>
+    </div>
+    <i class="bi " [ngClass]="isCollapsed ? 'bi-chevron-down' : 'bi-chevron-up' "></i>
+  </div>
+  <div>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+      <div class="bottom-row" (click)="toggle()">
+        <app-search-item-table></app-search-item-table>
+      </div>
+    </div>
+  </div>
+</div>

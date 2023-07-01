@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
-  path: "",
-  stop: "",
+  path: "base-path",
+  stop: "stops",
   timetable: "",
-  track: [],
+  track: ["base-track", "buszpalya"],
 };

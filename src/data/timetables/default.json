@@ -1,18 +1,13 @@
 {
   "name": "alap menetrend",
   "validFrom": "2018-11-15",
-  "path": "path",
-  "tracks": [
-    "homok",
-    "buszpalya",
-    "ocsodi ut"
-  ],
   "routes": [
     {
       "saturday": false,
       "stops": [
         {
           "stopId": 1,
+          "stopName": "Homok",
           "hour": 5,
           "minute": 0
         }

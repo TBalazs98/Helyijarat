@@ -21,13 +21,5 @@ export class AppComponent{
     if(!!browserLang){
       translate.use(browserLang.match(/hu|en/) ? browserLang : 'hu');
     }
-
-    this.http.get<Stop[]>("../../data/stops/stops.json").subscribe(x => {
-      console.log(x)
-    })
-
-
   }
-
-
 }

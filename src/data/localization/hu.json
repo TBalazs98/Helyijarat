@@ -5,5 +5,17 @@
     "Map": "Térkép",
     "Timetable": "Menetrend",
     "Menu": "Menü"
+  },
+  "Home": {
+    "Form": {
+      "SearchButton": "Keresés",
+      "SearchField": "Megálló"
+    }
+  },
+  "Map": {
+
+  },
+  "TimeTable": {
+
   }
 }

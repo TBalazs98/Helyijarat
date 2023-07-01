@@ -6,7 +6,12 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./search-item.component.scss']
 })
 export class SearchItemComponent {
-
   @Input() searchItem: any;
+
+  public isCollapsed = true;
+
+  toggle(){
+    this.isCollapsed = !this.isCollapsed;
+  }
 
 }

@@ -1,10 +1,8 @@
 <div class="home">
   <div class="main-section">
     <main class="container">
-      <div>
-        <p>{{"Name" | translate}}</p>
-        <i class="bi bi-calendar3"></i>
-      </div>
+      <div class="divider-container"></div>
+      <h2 class="mb-5">Keresés</h2>
       <div class="card mb-5">
         <form #searchForm="ngForm">
           <div class="row">
@@ -14,10 +12,13 @@
                 type="text"
                 class="form-control"
                 placeholder="Megálló"
-                [(ngModel)]="modelTypeahead"
-                [ngbTypeahead]="search"
-                required
+                [(ngModel)]="searchModel"
+                [ngbTypeahead]="autoComplete"
+                [resultFormatter]="resultFormatter"
+                [inputFormatter]="inputFormatter"
                 [editable]="false"
+                (click)="firstClick()"
+                required
               />
             </div>
             <div class="col-md-3 input-style">
@@ -39,7 +40,7 @@
               <ngb-timepicker required name="time" [(ngModel)]="time" [spinners]="true"></ngb-timepicker>
             </div>
             <div class="col-md-3 search-button">
-              <button class="btn btn-primary" (click)="searchStop()">Keresés</button>
+              <button class="btn btn-primary" (click)="search()">Keresés</button>
             </div>
           </div>
         </form>
@@ -47,7 +48,9 @@
       <div class="mb-5">
         <h2>Járatok</h2>
         <div class="result-list">
-          <app-stop-item-card></app-stop-item-card>
+          <app-search-item></app-search-item>
+          <app-search-item></app-search-item>
+          <app-search-item></app-search-item>
         </div>
       </div>
     </main>

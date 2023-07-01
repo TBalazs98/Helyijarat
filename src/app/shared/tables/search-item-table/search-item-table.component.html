@@ -1,0 +1,28 @@
+<div>
+  <p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Megálló</th>
+      <th scope="col">Időpont</th>
+      <th scope="col">Térkép</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stop of stops; index as i" class="visited">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ stop.stopName }}</td>
+      <td>{{ stop.time | time }}</td>
+      <td>
+        <img
+          [src]="'https://upload.wikimedia.org/wikipedia/commons/Canada'"
+          class="me-2"
+          style="width: 20px"
+        />
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

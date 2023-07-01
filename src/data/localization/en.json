@@ -7,7 +7,15 @@
     "Menu": "Menu"
   },
   "Home": {
-    "SearchButton": "Search",
-    "SearchField": "Stop"
+    "Form": {
+      "SearchButton": "Search",
+      "SearchField": "Stop"
+    }
+  },
+  "Map": {
+
+  },
+  "TimeTable": {
+
   }
 }

@@ -40,3 +40,19 @@
 .result-list{
   min-height: 500px;
 }
+
+.divider-container{
+  height: 50px;
+}
+
+@media (min-width: 1200px) {
+  .divider-container {
+    height: 50px;
+  }
+}
+
+main{
+  background-color: #f8f9fa;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

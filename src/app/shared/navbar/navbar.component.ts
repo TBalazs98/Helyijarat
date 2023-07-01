@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {fromEvent, merge, Observable, Subscription} from "rxjs";
 import {TranslateService} from "@ngx-translate/core";
-import {Languages} from "../models/Enums/Languages";
+import {Languages} from "../../models/Enums/Languages";
 
 @Component({
   selector: 'app-navbar',
