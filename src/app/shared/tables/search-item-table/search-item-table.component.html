@@ -11,7 +11,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let stop of stops; index as i" class="visited">
+    <tr *ngFor="let stop of elements; index as i" class="visited">
       <th scope="row">{{ i + 1 }}</th>
       <td>{{ stop.stopName }}</td>
       <td>{{ stop.time | time }}</td>

@@ -3,5 +3,5 @@ export const environment = {
   path: "",
   stop: "",
   timetable: "",
-  track: ["base-track", "buszpalya"],
+  track: ["homok-oszolo", "buszpalya"],
 };

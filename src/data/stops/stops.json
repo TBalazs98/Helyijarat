@@ -2,104 +2,104 @@
   {
     "id": 1,
     "location": {
-      "lat": "46.94727",
-      "lng": "20.26955"
+      "lat": "46.947281",
+      "lng": "20.269571"
     },
     "name": "Homok vasútállomás"
   },
   {
     "id": 2,
     "location": {
-      "lat": "46.949099",
-      "lng": "20.262908"
+      "lat": "46.948993",
+      "lng": "20.263050"
     },
-    "name": "Bányai K. úti elágazás központ irányába"
+    "name": "Bányai K. úti elágazás"
   },
   {
     "id": 3,
     "location": {
-      "lat": "46.95074",
-      "lng": "20.25877"
+      "lat": "46.950600",
+      "lng": "20.257025"
     },
-    "name": "Homoki Általános Iskola központ irányába"
+    "name": "Homoki Általános Iskola"
   },
   {
     "id": 4,
     "location": {
-      "lat": "46.95541",
-      "lng": "20.24681"
+      "lat": "46.955339",
+      "lng": "20.246831"
     },
-    "name": "Egészségház központ irányába"
+    "name": "Egészségház"
   },
   {
     "id": 5,
     "location": {
-      "lat": "46.95995",
-      "lng": "20.24106"
+      "lat": "46.959818",
+      "lng": "20.240891"
     },
-    "name": "Homoki elágazás központ irányába"
+    "name": "Homoki elágazás"
   },
   {
     "id": 6,
     "location": {
-      "lat": "46.96644",
-      "lng": "20.24867"
+      "lat": "46.966319",
+      "lng": "20.248712"
     },
-    "name": "Komondi féle megálló központ irányába"
+    "name": "Komondi féle megálló"
   },
   {
   "id": 7,
     "location": {
-      "lat": "46.97311",
-      "lng": "20.25489"
+      "lat": "46.973071",
+      "lng": "20.254834"
     },
-  "name": "Ószőlői Gyógyszertár központ irányába"
+  "name": "Ószőlői Gyógyszertár"
   },
   {
     "id": 8,
     "location": {
-      "lat": "46.980325",
-      "lng": "20.254424"
+      "lat": "46.980265",
+      "lng": "20.254415"
     },
     "name": "Balog sarok - Virág út"
   },
   {
     "id": 9,
     "location": {
-      "lat": "46.98230",
-      "lng": "20.24626"
+      "lat": "46.982180",
+      "lng": "20.246394"
     },
     "name": "Virág út - Árvai J. út"
   },
   {
     "id": 10,
     "location": {
-      "lat": "46.98389",
-      "lng": "20.24056"
+      "lat": "46.983870",
+      "lng": "20.240496"
     },
     "name": "Virág út - Baross körút"
   },
   {
     "id": 11,
     "location": {
-      "lat": "46.98700",
-      "lng": "20.24407"
+      "lat": "46.987057",
+      "lng": "20.243987"
     },
     "name": "Kalap út"
   },
   {
     "id": 12,
     "location": {
-      "lat": "46.98953",
-      "lng": "20.24488"
+      "lat": "46.989381",
+      "lng": "20.244820"
     },
     "name": "Idősek Gondozóháza"
   },
   {
     "id": 13,
     "location": {
-      "lat": "46.99230",
-      "lng": "20.24819"
+      "lat": "46.992349",
+      "lng": "20.248046"
     },
     "name": "Polgármesteri Hivatal"
   },
@@ -146,14 +146,6 @@
   {
     "id": 19,
     "location": {
-      "lat": "46.94727",
-      "lng": "20.26955"
-    },
-    "name": "Homok vasútállomás"
-  },
-  {
-    "id": 19,
-    "location": {
       "lat": "46.97740",
       "lng": "20.26724"
     },
@@ -162,57 +154,9 @@
   {
     "id": 20,
     "location": {
-      "lat": "46.97988",
+      "lat": "46.97980",
       "lng": "20.25634"
     },
     "name": "Penny Market"
-  },
-  {
-    "id": 21,
-    "location": {
-      "lat": "46.97319",
-      "lng": "20.25700"
-    },
-    "name": "Ószőlői Gyógyszertár Homok irányába"
-  },
-  {
-    "id": 22,
-    "location": {
-      "lat": "46.96643",
-      "lng": "20.24860"
-    },
-    "name": "Komondi féle megálló Homok irányába"
-  },
-  {
-    "id": 23,
-    "location": {
-      "lat": "46.95888",
-      "lng": "20.24074"
-    },
-    "name": "Homoki elágazás Homok irányába"
-  },
-  {
-    "id": 24,
-    "location": {
-      "lat": "46.95528",
-      "lng": "20.24690"
-    },
-    "name": "Egészségház Homok irányába"
-  },
-  {
-    "id": 25,
-    "location": {
-      "lat": "46.95046",
-      "lng": "20.25744"
-    },
-    "name": "Homoki Általános Iskola Homok irányába"
-  },
-  {
-    "id": 26,
-    "location": {
-      "lat": "46.94874",
-      "lng": "20.26391"
-    },
-    "name": "Bányai K. úti elágazás Homok irányába"
   }
 ]

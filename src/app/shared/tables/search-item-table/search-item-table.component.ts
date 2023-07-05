@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import RouteStop from "../../../models/stop/RouteStop";
+import RouteElement from "../../../models/timetable/RouteElement";
 
-const routeStops: RouteStop[] = [
+const routeElements: RouteElement[] = [
   {
     stopId: 1,
     stopName: "Homok",
@@ -35,5 +35,5 @@ const routeStops: RouteStop[] = [
   styleUrls: ['./search-item-table.component.scss']
 })
 export class SearchItemTableComponent {
-  stops = routeStops
+  elements = routeElements
 }

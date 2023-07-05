@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import Stop from "../models/stop/Stop";
 import {BehaviorSubject, takeUntil} from "rxjs";
 import Track from "../models/track/Track";
-import {LatLng} from "leaflet";
+import {LatLng, Polyline} from "leaflet";
 import {environment} from "../../environments/environment.development";
 
 @Injectable({

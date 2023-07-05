@@ -1,1 +1,28 @@
-<p>menetrend works!</p>
+<div class="home">
+  <div class="main-section">
+    <main class="container">
+      <p>asd</p>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Area</th>
+          <th scope="col">Population</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let country of countries; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ country.area | number }}</td>
+          <td>{{ country.population | number }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <div class="flex-shrink-0">
+    <app-footer></app-footer>
+  </div>
+</div>
+

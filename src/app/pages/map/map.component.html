@@ -1,9 +1,11 @@
 <div class="mapStyle"
      leaflet
      [leafletOptions]="options"
+     [(leafletZoom)]="zoom"
      [(leafletCenter)]="center"
-    [leafletMaxBounds]="fitBound">
-  <div *ngFor="let l of layers" [leafletLayer]="l"></div>
+     [leafletMaxBounds]="fitBound">
+  <div [leafletLayers]="layers"></div>
+  <div [leafletLayers]="stopMarkers"></div>
 </div>
 
 <app-side-panel [stopId]="selectedStop"  *ngIf="selectedStop"></app-side-panel>

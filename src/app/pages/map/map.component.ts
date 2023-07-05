@@ -1,7 +1,20 @@
 import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
-import {Circle, Icon, LatLng, LatLngBounds, Layer, MapOptions, Marker, tileLayer} from "leaflet";
+import {
+  Circle,
+  CircleMarker,
+  control,
+  icon,
+  Icon, latLng,
+  LatLng,
+  LatLngBounds,
+  Layer,
+  MapOptions,
+  Marker, Polyline,
+  tileLayer
+} from "leaflet";
 import {Subscription} from "rxjs";
 import {DataService} from "../../services/data.service";
+import zoom = control.zoom;
 
 @Component({
   selector: 'app-map',
@@ -16,36 +29,45 @@ export class MapComponent implements OnInit, OnDestroy{
   stops!: Subscription
   options!: MapOptions;
   layers: Layer[] = [];
+  stopMarkers: CircleMarker[] = []
+  zoom: number = 13
   center:LatLng = new LatLng(46.9688, 20.2442);
   fitBound: LatLngBounds = new LatLngBounds({lat: 46.91, lng: 20.19}, {lat: 47.05, lng: 20.31});
-  marker: Marker = new Marker(this.center, {draggable: false, icon: new Icon({iconUrl: "assets/hu.svg"})})
+
+  marker: Marker = new Marker(this.center, {draggable: false,    icon: icon({
+       iconSize: [ 20, 20 ],
+       iconUrl: 'assets/circle-solid.png',
+       iconRetinaUrl: 'assets/circle-solid.png',
+       shadowUrl: 'leaflet/marker-shadow.png'
+     })})
+
 
   ngOnInit(): void {
     this.options = {
       layers: [
         tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, minZoom: 13})
       ],
-      zoom: 13,
+      zoom: this.zoom,
       center: this.center,
     };
 
-    //mouseover
-    this.marker.addEventListener("click", (event) => {
-
-      console.log("ittvagy")
-    })
-
-    this.layers = [this.marker]
-
     this.stops = this.data.stops.subscribe(data => {
         data.map(stop =>{
-          this.layers.push(new Circle({lat: stop.location.lat, lng: stop.location.lng},{radius: 15, fill: true, fillOpacity: 1})
+          this.stopMarkers.push(new Circle({lat: stop.location.lat, lng: stop.location.lng},{radius: 12, fill: true, fillOpacity: 1, color: "#005ca1" })
             .addEventListener("click", () => {
               this.selectedStop = stop.location.lat
-              this.detector.detectChanges()
             }))
         })
+      this.detector.detectChanges()
+    })
+
+    this.data.track.subscribe(x => {
+      x.map(track => {
+        this.layers.push(new Polyline(track.points, {color: "#005ca1"}))
       })
+
+      this.detector.detectChanges()
+    })
   }
 
   closePanel(){
@@ -58,3 +80,10 @@ export class MapComponent implements OnInit, OnDestroy{
 
 
 }
+
+/*marker: Marker = new Marker(this.center, {draggable: false,    icon: icon({
+     iconSize: [ 20, 20 ],
+     iconUrl: 'assets/circle-solid.png',
+     iconRetinaUrl: 'assets/circle-solid.png',
+     shadowUrl: 'leaflet/marker-shadow.png'
+   })})*/

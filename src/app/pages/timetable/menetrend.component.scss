@@ -1,0 +1,30 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+.home{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin-bottom: auto;
+}
+
+main{
+  background-color: #f8f9fa;
+  margin-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+}
+
+table{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
