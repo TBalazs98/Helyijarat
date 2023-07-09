@@ -28,3 +28,10 @@ main{
 table{
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.formStyle{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+  gap: 25px;
+}

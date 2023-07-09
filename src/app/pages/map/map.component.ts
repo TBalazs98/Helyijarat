@@ -45,7 +45,8 @@ export class MapComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     this.options = {
       layers: [
-        tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, minZoom: 13})
+        tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, minZoom: 13}),
+
       ],
       zoom: this.zoom,
       center: this.center,
